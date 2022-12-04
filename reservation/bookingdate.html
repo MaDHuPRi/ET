@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.text-footer {
+		text-align: left;
+		padding: 0;
+		font-family: 'Ubuntu', sans-serif;
+		display: flex;
+		
+		color: white;
+	}
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: sticky;
+		top: 0;
+		cursor: pointer;
+	}
+
+	.background {
+		background: grey;
+		background-blend-mode: darken;
+		background-size: cover;
+	}
+
+	.nav-list {
+		width: 50%;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo img {
+		width: 100px;
+		border-radius: 100px;
+	}
+
+	.nav-list li {
+		list-style: none;
+		padding: 26px 30px;
+	}
+
+	.nav-list li a {
+		text-decoration: none;
+		color: black;
+	}
+
+	.nav-list li a:hover {
+		color: white;
+	}
+
+	.rightnav {
+		width: 30%;
+		text-align: right;
+	}
+
+	#search {
+		padding: 5px;
+		font-size: 17px;
+		border: 2px solid grey;
+		border-radius: 9px;
+	}
+
+
+	.text-big {
+		font-family: 'Piazzolla', serif;
+		font-weight: bold;
+		font-size: 35px;
+	}
+
+	.text-small {
+		font-size: 18px;
+	}
+	.text-verysmall {
+		font-size: 12px;
+	}
+	.btn {
+		padding: 8px 20px;
+		margin: 7px 0;
+		border: 2px solid white;
+		border-radius: 8px;
+		background: none;
+		color: white;
+		cursor: pointer;
+	}
+
+	.btn-sm {
+		padding: 6px 10px;
+		vertical-align: middle;
+	}
+	a:link, a:visited {
+ 		 color: white;
+  		text-decoration: underline;
+ 		cursor: auto;
+		}
+
+	a:link:active, a:visited:active {
+ 	 color: grey;
+	}
+	.background-img{
+		background-image: url(./kk.jpeg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+ 		background-size: 80%;
+		height:600px;
+	}
+	.row mt-3{
+		padding-top: 200px;
+	}
+	.container{
+		padding-top: 200px;
+	}
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>Hotel iris</title>
+    </head>
+    <body>
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <div class="logo">
+                    <img src="h.png">
+                </div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#offer">Holiday offers</a></li>
+                <li><a href="#sign">Sign in</a></li>
+                <li><a href="#ourhotels">Our hotels</a></li>
+            </ul>
+    
+            <div class="rightNav">
+                <input type="text" name="search" id="search">
+                <button class="btn btn-sm">Search</button>
+            </div>
+        </nav>
+        <section>
+			<div class="background-img">
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="bg p-4 rounded width_con">                      
+                            <div class="text_clr">
+                                <form action="" method="post">
+                                    <p>Check In : <span style="visibility:hidden">a</span>  <input type="date"></p>
+                                    <p>Check out : <input type="date"></p>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary" type="submit" name="show">Check Availability</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+        </section>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<footer class="background">
+		<p class="text-footer" align="left">
+			<img src='hotel.png' height="80" width="150">
+			©2022 Hotels of Canada Limited. All Rights Reserved.
+		</p>
+    </body>
+</html>
