@@ -21,27 +21,65 @@
                     <button class="btn btn-sm">Search</button>
                 </div>
             </nav>
-            <div class="slider">
-                <span id="slider-image-1"></span>
-                <span id="slider-image-2"></span>
-                <span id="slider-image-3"></span>
+            <meta name="viewport" content="width=half device-width, initial-scale=1">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="C:\Users\BHARATHI\OneDrive\Documents\booking.com\r2.jpg"style="width:100%">
+                </div>
                 
-                <div class="image-container">
-                    <img src="C:\Users\BHARATHI\admin page\r2.jpg" width="100%" class="slider-image">
-                    <img src="C:\Users\BHARATHI\admin page\r4.jpg"  width="100%"  class="slider-image">
-                    <img src="C:\Users\BHARATHI\admin page\swim.jpg"  width="100%" class="slider-image">
+                <div class="mySlides fade">
+                  <img src= "C:\Users\BHARATHI\OneDrive\Documents\booking.com\swim.jpg"style="width:100%">
                 </div>
-                <div class="buttun-container">
-                    <a href="#slider-image-1" class="slider-buttun" ></a>
-                    <a href="#slider-image-2" class="slider-buttun" ></a>
-                    <a href="#slider-image-3" class="slider-buttun" ></a>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="C:\Users\BHARATHI\OneDrive\Documents\booking.com\r4.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
                     
-                </div>
-            </div>
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
             
             
             <div class="services">
-                <h1  style="color:brown;" align="left">The services we provide</h1>
+                <h1  style="color:rgb(23, 7, 7); position: left; font-size:30px;">The services we provide </h1>
                 <ul>
                    <li>wifi</li>
                    <li>room service</li>
@@ -49,20 +87,10 @@
                    <li>vehicle availability</li>
                    </ul>
                 </div>
-                <div class="background">
-                <form action="details.html" method="GET">
-                   
-                <label for="place">where to?</label>
-                <input type="text">
-                <label for="time">Check-in</label>
-                <input type="date" id="stay" name="stay">
-                <label for="time">Check-out</label>
-                <input type="date" id="stay" name="stay">
-                <input type="image" src="C:\Users\BHARATHI\OneDrive\Documents\booking.com\submitbuttun.jpg" alt="Book Room" align="center" width="70" height="40">
-                
-            </form>
-        </div>
-        <li><a href="#Book Your Room" align="center">Book Your Room</a></li>
+        <div id="booking" class="section"> <div class="section-center"> <div class="container"> <div class="row"> <div class="booking-form"> <div class="form-header"> <h1>Make your reservation</h1> </div> <form> <div class="form-group"> <input class="form-control" type="text" placeholder="Country, ZIP, city..."> <span class="form-label">Destination</span> </div> <div class="row"> <div class="col-md-6"> <div class="form-group"> <input class="form-control" type="date" required> <span class="form-label">Check In</span> </div> </div> <div class="col-md-6"> <div class="form-group"> <input class="form-control" type="date" required> <span class="form-label">Check out</span> </div> </div> </div> <div class="row"> <div class="col-md-4"> <div class="form-group"> <select class="form-control" required> <option value="" selected hidden>no of rooms</option> <option>1</option> <option>2</option> <option>3</option> </select> <span class="select-arrow"></span> <span class="form-label">Rooms</span> </div> </div> <div class="col-md-4"> <div class="form-group"> <select class="form-control" required> <option value="" selected hidden>no of adults</option> <option>1</option> <option>2</option> <option>3</option> </select> <span class="select-arrow"></span> <span class="form-label">Adults</span> </div> </div> <div class="col-md-4"> <div class="form-group"> <select class="form-control" required> <option value="" selected hidden>no of children</option> <option>0</option> <option>1</option> <option>2</option> </select> <span class="select-arrow"></span> <span class="form-label">Children</span> </div> </div> </div> <div class="row"> <div class="col-md-6"> <div class="form-group"> <input class="form-control" type="email" placeholder="Enter your Email"> <span class="form-label">Email</span> </div> </div> <div class="col-md-6"> <div class="form-group"> <input class="form-control" type="tel" placeholder="Enter you Phone"> <span class="form-label">Phone</span> </div> </div> </div> <div class="form-btn"> <button class="submit-btn">Book Now</button> </div> </form> </div> </div> </div> </div>
+</div>
+        
+       
  
             <footer class="background">
                 <p class="text-footer" align="left">
